@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tableau de bord Objectifs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1>🎯 Mes Objectifs</h1>
+      <div class="summary" id="summary">
+        <!-- stats injected here -->
+      </div>
+    </header>
+
+    <main>
+      <section class="left">
+        <h2>Objectifs en cours</h2>
+        <div id="goalsList" class="goalsList"></div>
+        <h3>Ajouter un objectif</h3>
+        <form id="addForm" class="addForm">
+          <input id="title" placeholder="Titre (ex: Courir)" required />
+          <select id="mode">
+            <option value="bool">Case à cocher (terminé / non)</option>
+            <option value="count">Quantitatif (progression)</option>
+          </select>
+          <div id="countFields" class="countFields" style="display:none">
+            <input id="current" type="number" min="0" placeholder="Actuel (ex: 2)" />
+            <input id="target" type="number" min="1" placeholder="Objectif cible (ex: 10)" />
+          </div>
+          <input id="deadline" type="date" />
+          <div class="form-actions">
+            <button type="submit">Ajouter</button>
+            <button type="button" id="clearAll">Tout supprimer</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="right">
+        <h2>Stats & Historique</h2>
+        <div class="card" id="statsCard">
+          <!-- stats injected -->
+        </div>
+
+        <h3>Objectifs accomplis</h3>
+        <ul id="doneList" class="doneList"></ul>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Les données sont sauvegardées localement dans ton navigateur.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

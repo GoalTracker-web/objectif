@@ -1,0 +1,35 @@
+:root{--bg:#f4f6f8;--card:#ffffff;--accent:#2563eb;--good:#16a34a;--muted:#6b7280}
+*{box-sizing:border-box}body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);margin:0;padding:20px;color:#0f172a}
+.app{max-width:1100px;margin:0 auto;background:transparent}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+h1{margin:0 0 6px 0;font-size:22px}
+.summary{color:var(--muted);font-size:14px}
+main{display:grid;grid-template-columns:1fr 360px;gap:18px}
+.left{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(15,23,42,0.06)}
+.right{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(15,23,42,0.06)}
+.goalsList{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.goal{border:1px solid #e6eef8;padding:10px;border-radius:10px;display:flex;flex-direction:column;gap:8px;background:#fbfdff}
+.goal-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.title{font-weight:600}
+.meta{font-size:12px;color:var(--muted)}
+
+/* progress bar */
+.progress{height:10px;background:#eef2ff;border-radius:999px;overflow:hidden}
+.progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+
+/* buttons */
+button{background:var(--accent);border:0;color:white;padding:8px 10px;border-radius:8px;cursor:pointer}
+.small{padding:6px 8px;font-size:13px;border-radius:8px}
+.icon-btn{background:transparent;color:var(--muted);border:0;cursor:pointer;padding:6px}
+
+/* form */
+.addForm input,.addForm select{width:100%;padding:8px;margin-top:8px;border-radius:8px;border:1px solid #e6eef8}
+.form-actions{display:flex;gap:8px;margin-top:10px}
+.countFields{display:flex;gap:8px}
+
+/* done list */
+.doneList{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.doneItem{background:#ecfdf5;border:1px solid #bbf7d0;padding:8px;border-radius:8px;display:flex;justify-content:space-between;align-items:center}
+
+/* responsive */
+@media(max-width:900px){main{grid-template-columns:1fr} .right{order:2}}
